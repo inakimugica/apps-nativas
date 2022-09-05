@@ -1,0 +1,8 @@
+{
+  "name": "appsNativas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "35b9a41f"
+}
