@@ -18,17 +18,29 @@ const routes: Routes = [
       {
         path: 'tab3',
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+      }, 
+      {
+        path: 'tab4',
+        loadChildren: () => import('../tab4/tab4.module').then( m => m.Tab4PageModule)
+      },
+      {
+        path: 'tab5',
+        loadChildren: () => import('../tab5/tab5.module').then( m => m.Tab5PageModule)
+      },
+      {
+        path: 'tab3-recomend',
+        loadChildren: () => import('../tab3-recomend/tab3-recomend.module').then( m => m.Tab3RecomendPageModule)
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/tab3',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/tab3',
     pathMatch: 'full'
   }
 ];
