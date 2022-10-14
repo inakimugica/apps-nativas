@@ -10,6 +10,10 @@ const routes: Routes = [
    {
     path: 'tab3Recomend',
     component: Tab3Page,
+  },
+  {
+    path: 'product-detail',
+    loadChildren: () => import('./product-detail/product-detail.module').then( m => m.ProductDetailPageModule)
   }
 ];
 

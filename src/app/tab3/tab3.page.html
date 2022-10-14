@@ -30,97 +30,33 @@
 <ion-card>
 <h2 style="text-align: center;">VISTO RECIENTEMENTE</h2>
 
-<ion-card>
-  <img src="./../../assets/images/producto.jpg">
-  <ion-card-header style="text-align:center;" color="primary">
-    <ion-card-subtitle>Promoción Mayorista</ion-card-subtitle>
-    <ion-card-title>Celular iPhone X (6 unds.)</ion-card-title>
-      <ion-card-content>
-     <p> 
-    <b>Valor: $ 40.000</b> - <s>$ 52.000</s>
-      </p>
-  </ion-card-content>
-  </ion-card-header>
+  <ion-list>
+    <ion-item *ngFor="let product of products">
+      <ion-avatar slot="start">
+        <ion-img [src]="product.imageURL"></ion-img>
+      </ion-avatar>
+      <ion-label>{{product.title}}</ion-label>
+      <ion-button fill="outline" slot="end" [routerLink]="['/tabs/tab3', product.id]">View More</ion-button>
+    </ion-item>
+  </ion-list>
 </ion-card>
 
-<ion-card>
-  <img src="./../../assets/images/producto.jpg">
-  <ion-card-header style="text-align:center;" color="primary">
-    <ion-card-subtitle>Promoción Mayorista</ion-card-subtitle>
-    <ion-card-title>Celular iPhone X (6 unds.)</ion-card-title>
-      <ion-card-content>
-     <p> 
-    <b>Valor: $ 40.000</b> - <s>$ 52.000</s>
-      </p>
-  </ion-card-content>
-  </ion-card-header>
-</ion-card>
+
+
+<br><br><br>
+
+
 
 <ion-card>
-  <img src="./../../assets/images/producto.jpg">
-  <ion-card-header style="text-align:center;" color="primary">
-    <ion-card-subtitle>Promoción Mayorista</ion-card-subtitle>
-    <ion-card-title>Celular iPhone X (6 unds.)</ion-card-title>
-      <ion-card-content>
-     <p> 
-    <b>Valor: $ 40.000</b> - <s>$ 52.000</s>
-      </p>
-  </ion-card-content>
-  </ion-card-header>
+  <ion-list>
+    <ion-item *ngFor="let product of products">
+        <ion-img [src]="product.imageURL" style="max-width: 150px; margin: 0.5rem;"></ion-img>
+      <ion-label>{{product.title}}</ion-label>
+      <ion-button fill="outline" slot="end" [routerLink]="['/tabs/tab3', product.id]">View More</ion-button>
+    </ion-item>
+  </ion-list>
 </ion-card>
 
-<ion-card>
-  <img src="./../../assets/images/producto.jpg">
-  <ion-card-header style="text-align:center;" color="primary">
-    <ion-card-subtitle>Promoción Mayorista</ion-card-subtitle>
-    <ion-card-title>Celular iPhone X (6 unds.)</ion-card-title>
-      <ion-card-content>
-     <p> 
-    <b>Valor: $ 40.000</b> - <s>$ 52.000</s>
-      </p>
-  </ion-card-content>
-  </ion-card-header>
-</ion-card>
-
-<ion-card>
-  <img src="./../../assets/images/producto.jpg">
-  <ion-card-header style="text-align:center;" color="primary">
-    <ion-card-subtitle>Promoción Mayorista</ion-card-subtitle>
-    <ion-card-title>Celular iPhone X (6 unds.)</ion-card-title>
-      <ion-card-content>
-     <p> 
-    <b>Valor: $ 40.000</b> - <s>$ 52.000</s>
-      </p>
-  </ion-card-content>
-  </ion-card-header>
-</ion-card>
-
-<ion-card>
-  <img src="./../../assets/images/producto.jpg">
-  <ion-card-header style="text-align:center;" color="primary">
-    <ion-card-subtitle>Promoción Mayorista</ion-card-subtitle>
-    <ion-card-title>Celular iPhone X (6 unds.)</ion-card-title>
-      <ion-card-content>
-     <p> 
-    <b>Valor: $ 40.000</b> - <s>$ 52.000</s>
-      </p>
-  </ion-card-content>
-  </ion-card-header>
-</ion-card>
-
-<ion-card>
-  <img src="./../../assets/images/producto.jpg">
-  <ion-card-header style="text-align:center;" color="primary">
-    <ion-card-subtitle>Promoción Mayorista</ion-card-subtitle>
-    <ion-card-title>Celular iPhone X (6 unds.)</ion-card-title>
-      <ion-card-content>
-     <p>
-      <b>Valor: $ 40.000</b> - <s>$ 52.000</s>
-      </p>
-  </ion-card-content>
-  </ion-card-header>
-</ion-card>
-</ion-card>
 
 
 </ion-content>
