@@ -17,8 +17,17 @@ const routes: Routes = [
       },
       {
         path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-      }, 
+        children: [
+          {
+            path: "",
+            loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+          },
+          {
+            path: ":productId",
+            loadChildren: () => import('../tab3/product-detail/product-detail.module').then(m => m.ProductDetailPageModule)
+          }
+        ]
+      },
       {
         path: 'tab4',
         loadChildren: () => import('../tab4/tab4.module').then( m => m.Tab4PageModule)
