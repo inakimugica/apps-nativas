@@ -47,17 +47,5 @@
 
 
 
-<ion-card>
-	<ion-list>
-		<ion-item *ngFor="let product of products" >
-				<ion-img [src]="product.imageURL" style="max-width: 150px; margin: 0.5rem;"></ion-img>
-			<ion-label>{{product.title}}</ion-label>
-			<ion-button fill="outline" slot="end" [routerLink]="['/tabs/tab3', product.id]">View More</ion-button>
-		</ion-item>
-	</ion-list>
-</ion-card>
-
-
-
 </ion-content>
 
