@@ -1,11 +1,68 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Titulo del producto</ion-title>
+  	<ion-buttons slot="start">
+  		<ion-back-button defaultHref="/tab3"></ion-back-button>
+  	</ion-buttons>
+    <ion-title>{{product.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-	<div style="text-align: center;"><br><br>
-      <ion-button [routerLink]="['/tabs/tab3']">Volver al Inicio</ion-button>
-    </div>
+
+
+
+<ion-card>
+
+	<h2 style="text-align: center; font-size: 1.2rem;font-weight: bold;letter-spacing: 2px;">DETALLE DEL PRODUCTO</h2>
+
+
+	<ion-card style="display: inline-flex;width: 96%;">
+	  <ion-card-header style="text-align:center;display: inline-flex;width: 450px;height: 250px;padding: 0px;background-color: #fff;">
+		<ion-img [src]="product.imageURL"></ion-img>
+	  </ion-card-header>
+
+	  <ion-card-content style="width: 100%;text-align: center;">
+	    <ion-card-subtitle style="letter-spacing: 2px;font-size: 1rem;display: inline-flex;margin: 1rem;">Promoción Mayorista</ion-card-subtitle><br>
+	    <ion-card-title style="letter-spacing: 2px;font-size: 1.3rem;display: inline-flex;margin: 1rem;">{{product.title}}</ion-card-title>
+	     <p style="letter-spacing: 2px;font-size: 1.1rem;;margin: 1rem;"> 
+	    <b>Valor: $ 2.500</b> - <s>$ 3.900</s>
+	      </p>
+
+	      <ion-button style="width: 100%;margin-top: 2rem;">
+		    <b style="color: green;">AÑADIR AL CARRITO</b>
+		  </ion-button>
+	  </ion-card-content>
+	</ion-card><br><br>
+
+
+
+	<ion-card>
+	  <ion-card-content style="width: 100%;">
+	     <h3 style="text-align: center; font-weight: bolder;font-size: 1.1rem;">COMENTARIOS Y RESEÑAS</h3>
+	  </ion-card-content>
+	</ion-card>
+	<ion-card>
+	  <ion-card-content style="width: 100%;">
+	     <ion-list *ngIf="product.comments && product.comments.length > 0; else noComments">
+	     	<ion-item *ngFor="let comment of product.comments">
+	     		<ion-avatar slot="start">
+					<img src="https://assets.stickpng.com/images/585e4bd7cb11b227491c3397.png">
+				</ion-avatar>
+	     		: {{comment}}
+	     	</ion-item>
+	     </ion-list>
+	     <ng-template #noComments>
+	     	<h3 class="ion-text-center" style="color:#606060; font-size: 1rem;">No hay ningún comentario aún.</h3>
+	 	</ng-template>
+	  </ion-card-content>
+	</ion-card>
+
+
+
+</ion-card>
+
+
+
+
+
 </ion-content>
