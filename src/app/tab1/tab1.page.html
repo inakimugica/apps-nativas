@@ -1,60 +1,83 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-     Mi Perfil
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
 
-<ion-card>
-  <ion-card-header>
-    <div style="display: inline-flex; width: 20%; margin-left: 3rem;">
-    <ion-icon style="width: 50px; height: 50px;" name="person-circle-outline"></ion-icon>
-    </div>
-    <div style="display: inline-block; width: 60%">
-    <ion-card-title style="font-size: 1.2rem;margin-bottom: 9px;">Gonzalo Martino</ion-card-title>
-    <ion-card-title style="color: grey; font-size: 0.75rem;margin-top: -1px; font-">@gonzalo.martino</ion-card-title>
-    </div>
-
-  <ion-card-content>
-    <ion-button style="width: 100%;box-shadow: 0 2px 5px #9f9fff; letter-spacing: 1px;border-radius: 20px;">
-    <p>EDITAR PERFIL</p>
-    </ion-button>
-  </ion-card-content>
-  </ion-card-header>
-</ion-card>
-
-<ion-card>
-  <ion-card-title style="text-align: center; font-size: 1.4rem;margin: 1rem;">Información Personal</ion-card-title>
-  <ion-item><br><br><br>
-      <ion-icon name="mail" slot="start"></ion-icon>
-      <ion-label>gmartino@mail.austral.edu.ar</ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name="call-outline" slot="start"></ion-icon>
-      <ion-label>+54 3482 63-9817</ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name="id-card-outline" slot="start"></ion-icon>
-      <ion-label>45.267.897</ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-icon name="location-outline" slot="start"></ion-icon>
-      <ion-label>Paraguay 1950, Rosario, Santa Fe</ion-label>
-    </ion-item>
-</ion-card>
-
-    <ion-button color="black" style="width: 80%; margin:1.5rem 2.3rem; color: #fff; background: #404040 !important; box-shadow: 0 3px 7px #bfbfbf;border-radius: 20px; letter-spacing: 1px;">
-    <p>CERRAR SESIÓN</p>
-    </ion-button>
-
-
-
+  <ion-card>
+    <ion-card-header>
+      <div style="display: inline-flex; width: 20%; margin-left: 3rem;">
+      <ion-icon style="width: 50px; height: 50px;" name="person-circle-outline"></ion-icon>
+      </div>
+      <div style="display: inline-block; width: 60%">
+      <ion-card-title style="font-size: 1.2rem;margin-bottom: 9px;">Gonzalo Martino</ion-card-title>
+      <ion-card-title style="color: grey; font-size: 0.75rem;margin-top: -1px; font-">@gonzalo.martino</ion-card-title>
+      </div>
+  
+    <ion-card-content>
+      <ion-button style="width: 100%;box-shadow: 0 2px 5px #9f9fff; letter-spacing: 1px;border-radius: 20px;">
+      <p>EDITAR PERFIL</p>
+      </ion-button>
+    </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-title style="text-align: center; font-size: 1.4rem;margin: 1rem;">Información Personal</ion-card-title>
+    <ion-item><br><br><br>
+        <ion-icon name="mail" slot="start"></ion-icon>
+        <ion-label>gmartino@mail.austral.edu.ar</ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="call-outline" slot="start"></ion-icon>
+        <ion-label>+54 3482 63-9817</ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="id-card-outline" slot="start"></ion-icon>
+        <ion-label>45.267.897</ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="location-outline" slot="start"></ion-icon>
+        <ion-label>Paraguay 1950, Rosario, Santa Fe</ion-label>
+      </ion-item>
+  </ion-card>
+  
+      <ion-button color="black" style="width: 80%; margin:1.5rem 2.3rem; color: #fff; background: #404040 !important; box-shadow: 0 3px 7px #bfbfbf;border-radius: 20px; letter-spacing: 1px;">
+      <p>CERRAR SESIÓN</p>
+      </ion-button>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="ingresar()">
+        Ingresar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
 
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
