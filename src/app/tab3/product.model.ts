@@ -3,4 +3,10 @@ export interface Product {
 	title: string;
 	imageURL: string;
 	comments: string[];
+	
 }
+
+/* interface rubros{
+	id: number
+	rubro: string
+} */ 

@@ -32,6 +32,17 @@ export class RegistroPage implements OnInit {
   async guardar(){
     var f = this.formularioRegistro.value;
 
+    if(f.password != f.confirmacionPassword){
+      const alert = await this.alertController.create({
+        header: 'Contraseñas diferentes',
+        message: 'Las contraseñas no coinciden',
+        buttons: ['Aceptar']
+      });
+  
+      await alert.present();
+      return;
+    }
+
     if(this.formularioRegistro.invalid){
       const alert = await this.alertController.create({
         header: 'Datos incompletos',
