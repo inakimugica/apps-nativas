@@ -14,11 +14,11 @@ export class NoIngresadoGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
         if(localStorage.getItem('Ingresado')){
+          this.navCtrl.navigateRoot('/tabs/tab3');
           return false;
-        }else{
-          this.navCtrl.navigateRoot('login');
+        }
           return true;
         } 
-    }
+    
   
 }
