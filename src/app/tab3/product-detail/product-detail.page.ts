@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../products.service';
 import { Product } from '../product.model';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-product-detail',
@@ -12,7 +13,9 @@ export class ProductDetailPage implements OnInit {
 
 	product: Product;
 
-  constructor(private activatedRoute: ActivatedRoute, private productsService: ProductsService) { }
+  constructor(private activatedRoute: ActivatedRoute,
+  private productsService: ProductsService,
+  public alertController: AlertController) { }
 
   ngOnInit() {
   	this.activatedRoute.paramMap.subscribe(paramMap => {
@@ -20,6 +23,15 @@ export class ProductDetailPage implements OnInit {
   		this.product = this.productsService.getProduct(recipeId); 
   		}
   	)
+  }
+
+  async presentAlert(){
+    const alert = await this.alertController.create({
+      header: "¡HECHO!",
+      message: "Ha sido agregado al carrito correctamente.",
+      buttons: ["OK"]
+    })
+    await alert.present();
   }
 
 }

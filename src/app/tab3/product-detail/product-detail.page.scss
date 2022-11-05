@@ -1,0 +1,62 @@
+input {
+	text-align: center;
+	width: 20%;
+	height: 20px;
+	font-weight: bolder;
+}
+input:focus {
+	border: 1px solid #8080ff;
+	width: 21%;
+	height: 22px;
+}
+ion-card {
+	text-align: center;
+}
+.cardInfo {
+	display: inline-flex;
+	width: 96%;
+}
+h2 {
+	font-size: 1.2rem;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.headerInfo {
+	display: inline-flex;
+	width: 450px;
+	height: 250px;
+	padding: 0px;
+}
+.subtitleInfo {
+	letter-spacing: 2px;
+	font-size: 1rem;
+	display: inline-flex;
+	margin: 3rem 1rem 1rem 1rem;
+}
+ion-card-content {
+	width: 100%;
+}
+.titleInfo {
+	letter-spacing: 2px;
+	font-size: 1.3rem;
+	display: inline-flex;
+	margin: 1rem;
+}
+.pInfo {
+	letter-spacing: 2px;
+	font-size: 1rem;
+	margin: 1rem 0rem;
+}
+.btnCarrito {
+	width: 60%;
+	margin:auto;
+}
+h3 {
+	text-align: center;
+	font-weight: bolder;
+	font-size: 1.1rem;
+}
+h4 {
+	color:#606060;
+	font-size: 1rem;
+}

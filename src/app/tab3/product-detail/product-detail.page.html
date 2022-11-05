@@ -13,36 +13,52 @@
 
 <ion-card>
 
-	<h2 style="text-align: center; font-size: 1.2rem;font-weight: bold;letter-spacing: 2px;">DETALLE DEL PRODUCTO</h2>
 
+	<h2>DETALLE DEL PRODUCTO</h2>
 
-	<ion-card style="display: inline-flex;width: 96%;">
-	  <ion-card-header style="text-align:center;display: inline-flex;width: 450px;height: 250px;padding: 0px;background-color: #fff;">
+	<ion-card class="cardInfo">
+	  <ion-card-header class="headerInfo">
 		<ion-img [src]="product.imageURL"></ion-img>
 	  </ion-card-header>
 
-	  <ion-card-content style="width: 100%;text-align: center;">
-	    <ion-card-subtitle style="letter-spacing: 2px;font-size: 1rem;display: inline-flex;margin: 1rem;">Promoción Mayorista</ion-card-subtitle><br>
-	    <ion-card-title style="letter-spacing: 2px;font-size: 1.3rem;display: inline-flex;margin: 1rem;">{{product.title}}</ion-card-title>
-	     <p style="letter-spacing: 2px;font-size: 1.1rem;;margin: 1rem;"> 
-	    <b>Valor: $ 1.500</b> - <s>$ 3.900</s>
+	  <ion-card-content class="contentInfo">
+	    <ion-card-subtitle class="subtitleInfo">Promoción Mayorista</ion-card-subtitle><br>
+	    <ion-card-title class="titleInfo">{{product.title}}</ion-card-title>
+	     <p class="pInfo"> 
+	    <b>Valor: $ {{product.price}}</b> - <s>$ {{product.previousPrice}}</s>
 	      </p>
-
-	      <ion-button style="width: 100%;margin-top: 2rem;">
-		    <b style="color: green;">AÑADIR AL CARRITO</b>
-		  </ion-button>
 	  </ion-card-content>
-	</ion-card><br><br>
+	</ion-card><br>
 
+
+	<ion-card> 
+	      <ion-card-header color="light">
+	        <b>Descripción Del Producto</b>
+	      </ion-card-header>
+	      <ion-card-content>
+	        <br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      </ion-card-content>
+	</ion-card><br>
+	    
+	    	<label>Cantidad: </label><input type="number" min="1"><br><br>
+	      <ion-button class="ion-text-center btnCarrito" (click)="presentAlert();">
+		    <b>AÑADIR AL CARRITO</b>
+		  </ion-button><br><br>
+		  
 
 
 	<ion-card>
-	  <ion-card-content style="width: 100%;">
-	     <h3 style="text-align: center; font-weight: bolder;font-size: 1.1rem;">COMENTARIOS Y RESEÑAS</h3>
+	  <ion-card-content>
+	     <h3>COMENTARIOS Y RESEÑAS</h3>
 	  </ion-card-content>
 	</ion-card>
 	<ion-card>
-	  <ion-card-content style="width: 100%;">
+	  <ion-card-content>
 	     <ion-list *ngIf="product.comments && product.comments.length > 0; else noComments">
 	     	<ion-item *ngFor="let comment of product.comments">
 	     		<ion-avatar slot="start">
@@ -52,11 +68,10 @@
 	     	</ion-item>
 	     </ion-list>
 	     <ng-template #noComments>
-	     	<h3 class="ion-text-center" style="color:#606060; font-size: 1rem;">No hay ningún comentario aún.</h3>
+	     	<h4 class="ion-text-center">No hay ningún comentario aún.</h4>
 	 	</ng-template>
 	  </ion-card-content>
 	</ion-card>
-
 
 
 </ion-card>
