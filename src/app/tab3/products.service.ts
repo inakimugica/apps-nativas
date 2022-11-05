@@ -13,26 +13,34 @@ export class ProductsService {
 	{
 		id: "1",
 		title: "Banana",
-		imageURL: 'https://carrefourar.vtexassets.com/arquivos/ids/209558/2301954000008_02.jpg?v=637650839149230000',
-		comments: ['Excelente estado de las bananas, muy conforme.', 'Recibí todo perfecto, súper recomendado!']
+		imageURL: 'https://hdstatic.net/gridfs/holadoctor/621x470_55803ef0b93795c1498b4567-1593215415,863.jpg',
+		comments: ['Excelente estado de las bananas, muy conforme.', 'Recibí todo perfecto, súper recomendado!'],
+    price: 20.99,
+    previousPrice: 29.99
 	},
 	{
 		id: "2",
 		title: "Manzana",
 		imageURL: 'https://www.recetasnestlecam.com/sites/default/files/2022-04/tipos-de-manzana-royal-gala.jpg',
-		comments: ['Excelente estado de las manzanas, muy conforme.', 'Recibí todo perfecto, súper recomendado!']
+		comments: ['Excelente estado de las manzanas, muy conforme.', 'Recibí todo perfecto, súper recomendado!'],
+    price: 15.99,
+    previousPrice: 20.25
 	},
 	{
 		id: "3",
 		title: "Pera",
 		imageURL: 'http://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/26.jpg',
-		comments: ['Excelente estado de las peras, muy conforme.', 'Recibí todo perfecto, súper recomendado!']
+		comments: ['Excelente estado de las peras, muy conforme.', 'Recibí todo perfecto, súper recomendado!'],
+    price: 50.75,
+    previousPrice: 67.99
 	},
   {
     id: "4",
     title: "Naranja",
     imageURL: 'https://img.freepik.com/fotos-premium/fruta-naranja-hojas-pared-blanca_253984-3354.jpg?w=2000',
-    comments: []
+    comments: [],
+    price: 37.55,
+    previousPrice: 41.75
   }
 ]
 
@@ -50,12 +58,14 @@ export class ProductsService {
   	}
   }
 
-  addProduct(title: string, imageURL: string) {
+  addProduct(title: string, imageURL: string, price: number, previousPrice: number) {
   	this.products.push({
   		title,
   		imageURL,
   		comments: [],
-  		id: this.products.length + 1 + ""
+  		id: this.products.length + 1 + "",
+      price,
+      previousPrice
   	});
   }
 

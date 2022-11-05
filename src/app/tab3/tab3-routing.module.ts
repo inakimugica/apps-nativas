@@ -7,12 +7,8 @@ const routes: Routes = [
     path: '',
     component: Tab3Page,
   },
-   {
-    path: 'tab3Recomend',
-    component: Tab3Page,
-  },
   {
-    path: 'product-detail',
+    path: ':productId',
     loadChildren: () => import('./product-detail/product-detail.module').then( m => m.ProductDetailPageModule)
   }
 ];

@@ -3,7 +3,8 @@ export interface Product {
 	title: string;
 	imageURL: string;
 	comments: string[];
-	
+	price: number;
+	previousPrice: number;
 }
 
 /* interface rubros{
