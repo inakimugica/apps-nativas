@@ -24,17 +24,17 @@
         </ion-item>
       </form>
       <br>
-      <ion-button (click)="ingresar()" color="success">
-        Ingresar
-      </ion-button>
+      <ion-buttons>
+        <ion-button (click)="ingresar()">
+          Ingresar
+        </ion-button>
+      </ion-buttons>
     </ion-card-content>
+    <ion-buttons>
+      <ion-label class="label-registro" [routerLink]="['/registro']" color="white">¿No tienes cuenta? Registrate</ion-label>
+    </ion-buttons>
+    <div class="create"></div>
   </ion-card>
+
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar color="success">
-    <ion-buttons slot="end">
-      <ion-button [routerLink]="['/registro']" >Registrarse</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>

@@ -1,13 +1,16 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Registro</ion-title>
+    <ion-title color="primary">Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="menu-header-bg"></div>
+  <div class="header-content">
+  </div>
   <ion-card>
     <ion-card-header>
       <ion-card-title>Registro</ion-card-title>
@@ -27,8 +30,9 @@
           <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
         </ion-item>
         <br>
-        <ion-button (click)="guardar()">Registrarse
-        </ion-button>
+        <ion-buttons>
+          <ion-button (click)="guardar()">Registrarse</ion-button>
+        </ion-buttons>
       </form>
     </ion-card-content>
   </ion-card>

@@ -6,10 +6,58 @@
     background: #7590d6;
     background: url(./../../assets/images/frutas.jpg) center center no-repeat;
     background-size: cover;
-    box-shadow: 0px 1px 10px rgba(98, 140, 255, 0.5);
-    transform: rotate(-15deg);
-    border-radius: 10px 10px 10px 50px;
-    margin-left: -18px;
-    margin-top: -50px;
-    margin-bottom: 60px;
+    box-shadow: 0px 1px 10px rgba(230, 119, 7, 0.5);
+    
 }
+
+ion-card {
+    text-align: center;
+}
+
+ion-item {
+    text-align: center;
+}
+
+ion-buttons {
+    text-align: center;
+}
+
+ion-label {
+    text-align: center;
+}
+
+ion-button {
+    text-align: center;
+    width: 100%;
+    padding: 2px;
+    color: white;
+    background: linear-gradient(to right, #f1b110, #e17706, #ec2603);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button-footer {
+    width: 200px;
+}
+
+.create {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+}
+
+.label-registro {
+    text-align: center;
+    font-size: 15px;
+    color: #9a9a9aec;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+
+
