@@ -1,24 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title color="primary">Login</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
-  <div class="menu-header-bg"></div>
-  <div class="header-content">
-  </div>
-  <ion-card>
+  <div class="menu-header-bg"></div><br><br><br><br>
+  <ion-card color="white">
     <ion-card-header>
-      <ion-card-title>Login</ion-card-title>
+      <ion-card-title>Inicia Sesión</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <form [formGroup]="formularioLogin">
-        <ion-item>
+        <ion-item color="white">
           <ion-label position="floating">Nombre</ion-label>
           <ion-input formControlName="nombre"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item color="white">
           <ion-label position="floating">Contraseña</ion-label>
           <ion-input formControlName="password" type="password"></ion-input>
         </ion-item>
@@ -29,7 +23,7 @@
           Ingresar
         </ion-button>
       </ion-buttons>
-    </ion-card-content>
+    </ion-card-content><br>
     <ion-buttons>
       <ion-label class="label-registro" [routerLink]="['/registro']" color="white">¿No tienes cuenta? Registrate</ion-label>
     </ion-buttons>

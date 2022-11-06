@@ -1,0 +1,42 @@
+.divUno {
+	display: inline-flex; 
+	width: 20%; 
+	margin-left: 3rem;
+}
+.iconUno {
+	width: 50px; 
+	height: 50px;
+}
+.divDos {
+	display: inline-block; 
+	width: 60%;
+}
+.titleUno {
+	font-size: 1.2rem;
+	margin-bottom: 9px;
+}
+.titleDos {
+	color: #808080; 
+	font-size: 0.75rem;
+	margin-top: -1px;
+}
+.titleTres {
+	text-align: center; 
+	font-size: 1.4rem;
+	margin: 1rem;
+}
+.editarBtn {
+	width: 100%;
+	box-shadow: 0 2px 5px #9f9fff; 
+	letter-spacing: 1px;
+	border-radius: 20px;
+}
+.cerrarBtn {
+	width: 80%;
+	margin:1.5rem 2.3rem; 
+	color: #fff; 
+	background: #404040 !important; 
+	box-shadow: 0 3px 7px #bfbfbf;
+	border-radius: 20px; 
+	letter-spacing: 1px;
+}

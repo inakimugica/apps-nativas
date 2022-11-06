@@ -1,21 +1,28 @@
 
 
 .menu-header-bg {
-    height: 180px;
-    width: 450px;
-    background: #7590d6;
-    background: url(./../../assets/images/frutas.jpg) center center no-repeat;
-    background-size: cover;
-    box-shadow: 0px 1px 10px rgba(230, 119, 7, 0.5);
-    
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #303030, #5d3102);
+    position: absolute;
 }
 
 ion-card {
     text-align: center;
+    margin-top: 6rem;
+    box-shadow: 0px 0px 10px 3px #9c5203;
+    border-radius: 2rem;
+    padding: 5px;
 }
+
 
 ion-item {
     text-align: center;
+    margin: 0.8rem;
+    background: #fff;
+    border-radius: 1rem;
+    color: black;
+    font-size: 1.1rem;
 }
 
 ion-buttons {
@@ -24,6 +31,12 @@ ion-buttons {
 
 ion-label {
     text-align: center;
+}
+
+ion-card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
 }
 
 ion-button {
@@ -36,6 +49,7 @@ ion-button {
     border-radius: 20px;
     cursor: pointer;
     margin-top: 10px;
+    font-size: 1rem;
 }
 
 .button-footer {
@@ -50,13 +64,12 @@ ion-button {
 }
 
 .label-registro {
-    text-align: center;
-    font-size: 15px;
-    color: #9a9a9aec;
+    font-size: 20px;
+    color: #fff;
     cursor: pointer;
     user-select: none;
     text-decoration: none;
-    margin-top: 15px;
+    margin: 10px;
 }
 
 

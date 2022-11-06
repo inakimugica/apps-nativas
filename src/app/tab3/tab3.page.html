@@ -35,7 +35,7 @@
 				      <b>Valor: $ {{product.price}}</b> - <s>$ {{product.previousPrice}}</s>
 				        </p>
 				    </ion-card-content>
-				<ion-button fill="outline" [routerLink]="['/tabs/tab3', product.id]">Ver Detalle</ion-button>
+				<ion-button [routerLink]="['/tabs/tab3', product.id]">Ver Detalle</ion-button>
 				<ion-button fill="outline"  (click)="presentAlert();"><ion-icon name="cart-outline" class="btnCarrito"></ion-icon>Añadir al Carrito</ion-button>
 				</ion-card-header>
 				</ion-card>

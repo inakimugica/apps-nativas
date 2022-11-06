@@ -2,7 +2,7 @@
 
 .menu-header-bg {
     height: 180px;
-    width: 450px;
+    width: 500px;
     background: #7590d6;
     background: url(./../../assets/images/login.jpg) center center no-repeat;
     background-size: cover;
@@ -14,12 +14,26 @@
     margin-bottom: 60px;
 }
 
+.header-content {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #303030, #5d3102);
+    position: absolute;
+}
+
+.inputs {
+    background: #fff;
+}
+
 ion-card {
     text-align: center;
+    border-radius: 2rem;
+    padding: 5px;
 }
 
 ion-item {
     text-align: center;
+    margin: 0.5rem;
 }
 
 ion-buttons {
@@ -28,6 +42,11 @@ ion-buttons {
 
 ion-label {
     text-align: center;
+}
+ion-card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
 }
 
 ion-button {
@@ -40,6 +59,7 @@ ion-button {
     border-radius: 20px;
     cursor: pointer;
     margin-top: 10px;
+    font-size: 1rem;
 }
 
 .button-footer {
@@ -53,14 +73,13 @@ ion-button {
     bottom: 30px;
 }
 
-.label-registro {
-    text-align: center;
-    font-size: 15px;
-    color: #9a9a9aec;
+.label-login {
+    font-size: 20px;
+    color: #fff;
     cursor: pointer;
     user-select: none;
     text-decoration: none;
-    margin-top: 15px;
+    margin: 10px;
 }
 
 

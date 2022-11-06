@@ -1,17 +1,8 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title color="primary">Registro</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <div class="header-content"></div>
   <div class="menu-header-bg"></div>
-  <div class="header-content">
-  </div>
-  <ion-card>
+  <ion-card color="white">
     <ion-card-header>
       <ion-card-title>Registro</ion-card-title>
     </ion-card-header>
@@ -34,6 +25,9 @@
           <ion-button (click)="guardar()">Registrarse</ion-button>
         </ion-buttons>
       </form>
-    </ion-card-content>
+    </ion-card-content><br>
+    <ion-buttons>
+      <ion-label class="label-login" [routerLink]="['/login']">¿Ya tienes cuenta? Inicia Sesión</ion-label>
+    </ion-buttons>
   </ion-card>
 </ion-content>
