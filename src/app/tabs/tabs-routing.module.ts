@@ -28,10 +28,6 @@ const routes: Routes = [
         loadChildren: () => import('../tab5/tab5.module').then( m => m.Tab5PageModule)
       },
       {
-        path: 'tab3-recomend',
-        loadChildren: () => import('../tab3-recomend/tab3-recomend.module').then( m => m.Tab3RecomendPageModule)
-      },
-      {
         path: '',
         redirectTo: 'tab3',
         pathMatch: 'full'

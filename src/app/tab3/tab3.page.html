@@ -8,7 +8,10 @@
 
 
 <ion-content [fullscreen]="true">
-<ion-searchbar placeholder="Búsqueda"></ion-searchbar>
+
+<ion-searchbar placeholder="Búsqueda" [(ngModel)]="searchTerm" showCancelButton="focus" animated></ion-searchbar>
+
+	
 
 
 	<ion-header collapse="condense">
@@ -24,18 +27,18 @@
 
 	<ion-card>
 	<ion-list>
-		<ion-item *ngFor="let product of products">
-			<ion-img [src]="product.imageURL" class="imgProduct"></ion-img>
+		<ion-item *ngFor="let producto of productos | filter:searchTerm">
+			<ion-img [src]="producto.imageURL" class="imgProduct"></ion-img>
           		<ion-card class="cardProduct">
           		<ion-card-header>
         		<ion-card-subtitle>Promoción Mayorista</ion-card-subtitle>
-      			<ion-card-title>{{product.title}}</ion-card-title>
+      			<ion-card-title>{{producto.titulo}}</ion-card-title>
 				    <ion-card-content>
 				       <p> 
-				      <b>Valor: $ {{product.price}}</b> - <s>$ {{product.previousPrice}}</s>
+				      <b>Valor: $ {{producto.price}}</b>
 				        </p>
 				    </ion-card-content>
-				<ion-button [routerLink]="['/tabs/tab3', product.id]">Ver Detalle</ion-button>
+				<ion-button [routerLink]="['/tabs/tab3', producto.id]">Ver Detalle</ion-button>
 				<ion-button fill="outline"  (click)="presentAlert();"><ion-icon name="cart-outline" class="btnCarrito"></ion-icon>Añadir al Carrito</ion-button>
 				</ion-card-header>
 				</ion-card>

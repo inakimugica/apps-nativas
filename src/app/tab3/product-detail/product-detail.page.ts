@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../products.service';
-import { Product } from '../product.model';
+// import { Product } from '../product.model';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -11,27 +11,34 @@ import { AlertController } from '@ionic/angular';
 })
 export class ProductDetailPage implements OnInit {
 
-	product: Product;
+  	constructor(private productService: ProductsService,
+  		public alertController: AlertController, productsService:ProductsService) {}
 
-  constructor(private activatedRoute: ActivatedRoute,
-  private productsService: ProductsService,
-  public alertController: AlertController) { }
+    searchTerm: string;  
+    productos = []
+    todosLosProductos = []
 
-  ngOnInit() {
-  	this.activatedRoute.paramMap.subscribe(paramMap => {
-  		const recipeId = paramMap.get('productId')
-  		this.product = this.productsService.getProduct(recipeId); 
-  		}
-  	)
+  	ngOnInit(){
+  		// this.products = this.productService.getProducts()
+      this.getProductos()
   }
 
-  async presentAlert(){
+  async getProductos() {
+    this.productos = await this.productService.getProductos()
+    console.table(this.productos);
+    this.todosLosProductos = Array.from(this.productos)
+  }
+
+
+
+    /* async presentAlert(){
     const alert = await this.alertController.create({
       header: "¡HECHO!",
       message: "Ha sido agregado al carrito correctamente.",
       buttons: ["OK"]
     })
-    await alert.present();
-  }
+    await alert.present(); 
+  } */
 
-}
+  
+} 
