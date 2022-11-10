@@ -10,17 +10,11 @@
 <ion-content [fullscreen]="true">
 
 <ion-searchbar placeholder="Búsqueda" [(ngModel)]="searchTerm" showCancelButton="focus" animated></ion-searchbar>
-
-	
-
-
 	<ion-header collapse="condense">
 		<ion-toolbar>
 			<ion-title size="large">INICIO</ion-title>
 		</ion-toolbar>
 	</ion-header>
-
-
 
 <ion-card>
 <h2>VISTO RECIENTEMENTE</h2>
@@ -45,6 +39,27 @@
 		</ion-item>
 	</ion-list>
 	</ion-card>
+
+	<ion-card>
+		<ion-list>
+			<ion-item *ngFor="let producto of productos">
+				<ion-img [src]="producto.imageURL"></ion-img>
+					  <ion-card class="cardProduct">
+					  <ion-card-header>
+					<ion-card-subtitle>Promoción Mayorista</ion-card-subtitle>
+					  <ion-card-title>{{producto.titulo}}</ion-card-title>
+						<ion-card-content>
+						   <p> 
+						  <b>Valor: $ {{producto.price}}</b>
+							</p>
+						</ion-card-content>
+					<ion-button [routerLink]="['/tabs/tab3', producto.id]">Ver Detalle</ion-button>
+					<ion-button fill="outline"  (click)="presentAlert();"><ion-icon name="cart-outline" class="btnCarrito"></ion-icon>Añadir al Carrito</ion-button>
+					</ion-card-header>
+					</ion-card>
+			</ion-item>
+		</ion-list>
+		</ion-card>
 
 </ion-card>
 
