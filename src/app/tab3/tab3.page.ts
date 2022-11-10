@@ -25,7 +25,7 @@ export class Tab3Page {
   async getProductos() {
     this.productos = await this.productService.getProductos()
     console.table(this.productos);
-    this.todosLosProductos = Array.from(this.productos)
+    // this.todosLosProductos = Array.from(this.productos)
   }
 
 

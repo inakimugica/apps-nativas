@@ -12,11 +12,17 @@ import { AlertController } from '@ionic/angular';
 export class ProductDetailPage implements OnInit {
 
   	constructor(private productService: ProductsService,
-  		public alertController: AlertController, productsService:ProductsService) {}
+  		public alertController: AlertController) {}
 
     searchTerm: string;  
-    productos = []
-    todosLosProductos = []
+    producto = {
+      nombre: "",
+      comments: "",
+      category: "",
+      imageURL: "",
+      price: 0
+    }
+    // todosLosProductos = []
 
   	ngOnInit(){
   		// this.products = this.productService.getProducts()
@@ -24,9 +30,10 @@ export class ProductDetailPage implements OnInit {
   }
 
   async getProductos() {
-    this.productos = await this.productService.getProductos()
-    console.table(this.productos);
-    this.todosLosProductos = Array.from(this.productos)
+    const productos = await this.productService.getProductos()
+    this.producto = productos.filter(producto => producto.id === 1)[0]
+    //activated route
+    // this.todosLosProductos = Array.from(this.productos)
   }
 
 

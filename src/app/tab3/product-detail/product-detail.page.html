@@ -3,7 +3,7 @@
   	<ion-buttons slot="start">
   		<ion-back-button defaultHref="/tab3"></ion-back-button>
   	</ion-buttons>
-    <ion-title>{{producto.nombre}}</ion-title>
+    <ion-title>{{producto.titulo}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -23,7 +23,7 @@
 
 	  <ion-card-content class="contentInfo">
 	    <ion-card-subtitle class="subtitleInfo">Promoción Mayorista</ion-card-subtitle><br>
-	    <ion-card-title class="titleInfo">{{producto.titulo}}</ion-card-title>
+	    <ion-card-title class="titleInfo">{{producto.nombre}}</ion-card-title>
 	     <p class="pInfo"> 
 	    <b>Valor: $ {{producto.price}}</b>
 	      </p>
@@ -60,7 +60,7 @@
 	<ion-card>
 	  <ion-card-content>
 	     <ion-list *ngIf="producto.comments && producto.comments.length > 0; else noComments">
-	     	<ion-item *ngFor="let comment of product.comments">
+	     	<ion-item>
 	     		<ion-avatar slot="start">
 					<img src="https://assets.stickpng.com/images/585e4bd7cb11b227491c3397.png">
 				</ion-avatar>

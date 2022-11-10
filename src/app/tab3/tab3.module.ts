@@ -15,7 +15,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    RouterModule.forChild([{ path: '', component: Tab3Page }]),
     Tab3PageRoutingModule,
     Ng2SearchPipeModule,
   ],
