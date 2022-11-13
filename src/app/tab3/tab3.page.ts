@@ -30,14 +30,14 @@ export class Tab3Page {
 
 
 
-    /* async presentAlert(){
+    async presentAlert(){
     const alert = await this.alertController.create({
       header: "¡HECHO!",
       message: "Ha sido agregado al carrito correctamente.",
       buttons: ["OK"]
     })
     await alert.present(); 
-  } */
+  }
 
   
 } 

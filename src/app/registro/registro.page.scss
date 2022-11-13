@@ -1,39 +1,33 @@
 
 
-.menu-header-bg {
-    height: 180px;
-    width: 500px;
-    background: #7590d6;
-    background: url(./../../assets/images/login.jpg) center center no-repeat;
-    background-size: cover;
-    box-shadow: 0px 1px 10px rgba(98, 140, 255, 0.5);
-    transform: rotate(-15deg);
-    border-radius: 10px 10px 10px 50px;
-    margin-left: -18px;
-    margin-top: -50px;
-    margin-bottom: 60px;
-}
-
-.header-content {
+/* .menu-header-bg {
     height: 100%;
     width: 100%;
     background: linear-gradient(to right, #303030, #5d3102);
-    position: absolute;
+    position: absolute; 
+} */
+
+.menu-header-bg {
+    height: 10%;
+    width: 10%;
+    background: #7590d6;
+    background: url(./../../assets/images/CibusLogo.png) center center no-repeat;
+    background-size: cover;
+    box-shadow: 0px 1px 10px rgba(98, 140, 255, 0.5);
+    
 }
 
-.inputs {
-    background: #fff;
-}
-
-ion-card {
+ion-card-title {
     text-align: center;
-    border-radius: 2rem;
-    padding: 5px;
 }
 
 ion-item {
     text-align: center;
-    margin: 0.5rem;
+    margin: 0.8rem;
+    background: #fff;
+    border-radius: 1rem;
+    color: black;
+    font-size: 1.1rem;
 }
 
 ion-buttons {
@@ -43,6 +37,7 @@ ion-buttons {
 ion-label {
     text-align: center;
 }
+
 ion-card-title {
     font-weight: bold;
     font-size: 1.5rem;
@@ -73,9 +68,10 @@ ion-button {
     bottom: 30px;
 }
 
-.label-login {
+.label-registro {
     font-size: 20px;
-    color: #fff;
+    font-style: italic;
+    // color: #fff;
     cursor: pointer;
     user-select: none;
     text-decoration: none;
