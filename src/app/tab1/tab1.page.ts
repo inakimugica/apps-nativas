@@ -30,24 +30,4 @@ export class Tab1Page implements OnInit {
   ngOnInit() {
   }
 
-  async ingresar(){
-    var f = this.formularioLogin.value;
-
-    var usuario = JSON.parse(localStorage.getItem('usuario'));
-
-    if(usuario.nombre == f.nombre && usuario.password == f.password){
-      console.log('Ingresado');
-      localStorage.setItem('Ingresado', 'true');
-      this.navCtrl.navigateRoot('/tabs/tab3')
-    }else{
-      const alert = await this.alertController.create({
-        header: 'Datos incorrectos',
-        message: 'Los datos que ingresaste son incorrectos.',
-        buttons: ['Aceptar']
-      });
-  
-      await alert.present();
-    }
-  }
-
 }

@@ -27,10 +27,11 @@
         		<ion-card-subtitle>Promoción Mayorista</ion-card-subtitle>
       			<ion-card-title>{{producto.titulo}}</ion-card-title>
 				    <ion-card-content>
-						<ion-button>
+						<ion-button (click)="productPressed(e)">
 							<ion-icon slot="icon-only" name="heart"></ion-icon>
 						  </ion-button>
-				       <p> 
+				       <p>
+						<b id="{{producto.id}}">{{producto.id}}</b> 
 				      <b>Valor: $ {{producto.price}}</b>
 				        </p>
 				    </ion-card-content>

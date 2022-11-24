@@ -6,6 +6,7 @@ import {
   FormBuilder
 } from '@angular/forms';
 import { AlertController, NavController } from '@ionic/angular';
+import { UsuarioService } from '../usuario.service';
 
 @Component({
   selector: 'app-registro',
@@ -18,21 +19,26 @@ export class RegistroPage implements OnInit {
   
   constructor(public fb: FormBuilder,
     public alertController: AlertController,
-    public navCtrl: NavController) {
+    public navCtrl: NavController,
+    private usuarioservice: UsuarioService) {
     this.formularioRegistro = this.fb.group({
       'nombre': new FormControl("", Validators.required),
       'password': new FormControl("", Validators.required),
-      'confirmacionPassword': new FormControl("", Validators.required)
+      'confirmationPassword': new FormControl("", Validators.required)
     });
   }
+
+  usuarios = []
+  
+
 
   ngOnInit() {
   }
 
   async guardar(){
-    var f = this.formularioRegistro.value;
+    let f = this.formularioRegistro.value;
 
-    if(f.password != f.confirmacionPassword){
+    if(f.password != f.confirmationPassword){
       const alert = await this.alertController.create({
         header: 'Contraseñas diferentes',
         message: 'Las contraseñas no coinciden',
@@ -54,13 +60,14 @@ export class RegistroPage implements OnInit {
       return;
     }
 
-    var usuario = {
+    let usuario = {
       nombre: f.nombre,
       password: f.password
     }
 
     localStorage.setItem('usuario',JSON.stringify(usuario));
 
+    this.usuarioservice.register(usuario)
     this.navCtrl.navigateRoot('login');
   }
 

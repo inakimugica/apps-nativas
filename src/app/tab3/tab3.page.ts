@@ -9,9 +9,11 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  
+
 
   	constructor(private productService: ProductsService,
-  		public alertController: AlertController, productsService:ProductsService) {}
+  		public alertController: AlertController, productsService:ProductsService, private productsservice: ProductsService) {}
 
     searchTerm: string;  
     productos = []
@@ -29,7 +31,6 @@ export class Tab3Page {
   }
 
 
-
     async presentAlert(){
     const alert = await this.alertController.create({
       header: "¡HECHO!",
@@ -40,4 +41,13 @@ export class Tab3Page {
   }
 
   
-} 
+  async favorito(){
+    const products = document.getElementsByClassName("id")[0].id;
+
+    const productPressed = e => {
+      console.log(e.target.id);  // Get ID of Clicked Element
+    }
+  
+    // this.productsservice.marcarFavorito(id)
+  } 
+}
