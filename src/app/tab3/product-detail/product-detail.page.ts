@@ -22,7 +22,6 @@ export class ProductDetailPage implements OnInit {
       imageURL: "",
       price: 0
     }
-    // todosLosProductos = []
 
   	ngOnInit(){
   		// this.products = this.productService.getProducts()
@@ -32,8 +31,6 @@ export class ProductDetailPage implements OnInit {
   async getProductos() {
     const productos = await this.productService.getProductos()
     this.producto = productos.filter(producto => producto.id === 1)[0]
-    //activated route
-    // this.todosLosProductos = Array.from(this.productos)
   }
 
 

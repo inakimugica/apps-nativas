@@ -41,13 +41,16 @@ export class Tab3Page {
   }
 
   
-  async favorito(){
-    const products = document.getElementsByClassName("id")[0].id;
+/*  async favorito(){
+ const buttons = document.getElementsByTagName("button");
 
-    const productPressed = e => {
-      console.log(e.target.id);  // Get ID of Clicked Element
-    }
-  
-    // this.productsservice.marcarFavorito(id)
-  } 
+const buttonPressed = e => {
+  console.log(e.target.id);  // Get ID of Clicked Element
 }
+
+for (let button of buttons) {
+  button.addEventListener("click", buttonPressed);
+}
+    // this.productsservice.marcarFavorito(id)
+  } */
+} 
