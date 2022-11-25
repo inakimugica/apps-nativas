@@ -20,18 +20,18 @@
 
 	<ion-card>
 	<ion-list>
-		<ion-item *ngFor="let producto of productos | filter:searchTerm">
+		<ion-item *ngFor="let producto of productos | filter:searchTerm" >
 			<ion-img [src]="producto.imageURL" class="imgProduct"></ion-img>
           		<ion-card class="cardProduct">
           		<ion-card-header>
         		<ion-card-subtitle>Promoción Mayorista</ion-card-subtitle>
       			<ion-card-title>{{producto.titulo}}</ion-card-title>
 				    <ion-card-content>
-						<ion-button (click)="productPressed(e)">
-							<ion-icon slot="icon-only" name="heart"></ion-icon>
+						<ion-button  id="button-id" (click)="favorito(producto.id)">
+							{{producto.id}}
+							<ion-icon id="{{producto.price}}" slot="icon-only" name="heart"></ion-icon>
 						  </ion-button>
 				       <p>
-						<b class="{{producto.id}}">{{producto.id}}</b> 
 				      <b>Valor: $ {{producto.price}}</b>
 				        </p>
 				    </ion-card-content>

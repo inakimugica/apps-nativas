@@ -28,6 +28,7 @@ export class Tab3Page {
     this.productos = await this.productService.getProductos()
     console.table(this.productos);
     // this.todosLosProductos = Array.from(this.productos)
+    
   }
 
 
@@ -41,16 +42,10 @@ export class Tab3Page {
   }
 
   
-/*  async favorito(){
- const buttons = document.getElementsByTagName("button");
+async favorito(id: number){
 
-const buttonPressed = e => {
-  console.log(e.target.id);  // Get ID of Clicked Element
-}
-
-for (let button of buttons) {
-  button.addEventListener("click", buttonPressed);
-}
-    // this.productsservice.marcarFavorito(id)
-  } */
+  console.log(id);
+  this.productsservice.marcarFavorito(id);
+  }
+ 
 } 

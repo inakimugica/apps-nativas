@@ -38,7 +38,7 @@ export class LoginPage implements OnInit {
     let f = this.formularioLogin.value;
 
     let usuario = JSON.parse(localStorage.getItem('usuario'));
-
+    if(!usuario) return
     if(usuario.nombre == f.nombre && usuario.password == f.password){
       console.log('Ingresado');
       localStorage.setItem('Ingresado', 'true');

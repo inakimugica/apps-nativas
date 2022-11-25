@@ -35,9 +35,15 @@ export class RegistroPage implements OnInit {
   ngOnInit() {
   }
 
+  /* async getProductos() {
+    this.productos = await this.productService.getProductos()
+    console.table(this.productos);
+    // this.todosLosProductos = Array.from(this.productos)
+  } */
+
   async guardar(){
     let f = this.formularioRegistro.value;
-
+    this.usuarios = await this.usuarioservice.getUsuarios()
     if(f.password != f.confirmationPassword){
       const alert = await this.alertController.create({
         header: 'Contraseñas diferentes',
@@ -67,8 +73,10 @@ export class RegistroPage implements OnInit {
 
     localStorage.setItem('usuario',JSON.stringify(usuario));
 
-    this.usuarioservice.register(usuario)
-    this.navCtrl.navigateRoot('login');
+    if(f.nombre == usuario.nombre && f.password == usuario.password) {
+      this.usuarioservice.register(usuario)
+      this.navCtrl.navigateRoot('login');
+    }
   }
 
 }

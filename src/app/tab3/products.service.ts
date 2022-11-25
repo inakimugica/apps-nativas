@@ -31,7 +31,7 @@ export class ProductsService {
 
 async marcarFavorito (id) {
   const producto = {id: id, favorito: true}
-  const res = await fetch("http://localhost:8080/id", {method: "POST", body:JSON.stringify(producto), headers: {
+  const res = await fetch("http://localhost:8080/producto", {method: "POST", body:JSON.stringify(producto), headers: {
     'Content-Type': 'application/json'}})
     
   const resjson = (await res).json()
