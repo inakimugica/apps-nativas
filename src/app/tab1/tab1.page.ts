@@ -30,4 +30,8 @@ export class Tab1Page implements OnInit {
   ngOnInit() {
   }
 
+  async cerrarSesion() {
+    localStorage.clear();
+    location.href = "../login";
+  }
 }
